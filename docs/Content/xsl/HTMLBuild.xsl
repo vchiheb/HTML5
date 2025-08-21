@@ -6,6 +6,7 @@
 <xsl:variable name="file" select="document(concat('../html/', $file1, '.html'))"/>
 
 <xsl:variable name="site-header-file" select="document('../html/SiteHeader.html')"/>
+<xsl:variable name="site-footer-file" select="document('../html/SiteFooter.html')"/>
 
 <xsl:template match="Document">
     <html>
@@ -15,8 +16,13 @@
         <body>
             <xsl:call-template name="site-header"/>
             <xsl:call-template name="body"/>
+            <xsl:call-template name="site-footer"/>
         </body>
     </html>
+</xsl:template>
+
+<xsl:template name="site-footer">
+    <xsl:copy-of select="$site-footer-file"/>
 </xsl:template>
 
 <xsl:template name="site-header">
