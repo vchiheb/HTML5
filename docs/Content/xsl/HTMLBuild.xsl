@@ -5,15 +5,22 @@
 <xsl:param name="file1"/>
 <xsl:variable name="file" select="document(concat('../html/', $file1, '.html'))"/>
 
+<xsl:variable name="site-header-file" select="document('../html/SiteHeader.html')"/>
+
 <xsl:template match="Document">
     <html>
         <head>
             <xsl:call-template name="head"/>
         </head>
         <body>
+            <xsl:call-template name="site-header"/>
             <xsl:call-template name="body"/>
         </body>
     </html>
+</xsl:template>
+
+<xsl:template name="site-header">
+    <xsl:copy-of select="$site-header-file"/>
 </xsl:template>
 
 <xsl:template name="body">
