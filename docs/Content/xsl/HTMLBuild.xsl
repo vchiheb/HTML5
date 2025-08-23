@@ -15,7 +15,9 @@
         </head>
         <body>
             <xsl:call-template name="site-header"/>
+            <main>
             <xsl:call-template name="body"/>
+            </main> 
             <xsl:call-template name="site-footer"/>
         </body>
     </html>

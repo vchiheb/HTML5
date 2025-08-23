@@ -1,2 +1,7 @@
 ./build-page HowToAddCodeCopyButtonToHTML
-./build-page HowToAddSnippetToVisualStudioCode 
+./build-page HowToAddSnippetToVisualStudioCode
+./build-page HTML5Tags
+./build-page VisualStudioCodeExtensions
+./build-page HTMLTags
+./build-page HTMLAttributes
+./build-page CSS3Selectors
